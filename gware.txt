@@ -1,0 +1,16 @@
+"gware"
+{
+	"base"		"base"
+    "title"  "Garry's Warehouse"
+    "version"   "1.0.0"
+	"menusystem" "1"
+
+    "author_name"   "Nookyava"
+    "author_email"  "jcw21396@gmail.com"
+	
+	"maps"			"^gware_"
+
+    "icon"  ""
+    "info"  ""
+    "hide"  "0"
+}

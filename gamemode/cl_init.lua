@@ -3,7 +3,7 @@ include("shared.lua")
 -- Auto-includes each new Lua file --
 
 local folder, files, dir
-folder = GM.FolderName.."/gamemode/plugins"
+folder = GM.FolderName.."/gamemode/core"
 files = file.Find(folder.."/*.lua", "LUA")
 for _, file in ipairs(files) do
 	include(folder.."/"..file)
@@ -15,7 +15,7 @@ for _, file in ipairs(files) do
 	include(folder.."/"..file)
 end
 
-folder = GM.FolderName.."/gamemode/plugins/cl"
+folder = GM.FolderName.."/gamemode/core/cl"
 files = file.Find(folder.."/*.lua", "LUA")
 for _, file in ipairs(files) do
 	include(folder.."/"..file)

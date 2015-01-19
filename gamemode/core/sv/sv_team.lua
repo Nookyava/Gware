@@ -4,6 +4,7 @@ net.Receive("gw_pickteam", function(len, ply)
 	ply:SetTeam(cteam)
 	ply:KillSilent()
 	
+	if cteam != 1 then return; end
 	net.Start("gware_pickclass")
 	net.Send(ply)
 end)

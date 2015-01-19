@@ -29,25 +29,6 @@ util.AddNetworkString("gw_retrievecreditlist")
 util.AddNetworkString("gw_sendcreditlist")
 util.AddNetworkString("gw_updatedamage")
 
--- HUD Stuff --
-resource.AddFile("materials/gware/icons/boss.png")
-resource.AddFile("materials/gware/icons/spectator.png")
-resource.AddFile("materials/gware/hud/ammo_icon.png")
-resource.AddFile("materials/gware/hud/boss_icon.png")
-resource.AddFile("materials/gware/hud/players_icon.png")
-
--- Main Menu Resource Icons --
-resource.AddFile("materials/gware/menu/boss_select.png")
-resource.AddFile("materials/gware/menu/loadout_select.png")
-resource.AddFile("materials/gware/menu/class_select.png")
-resource.AddFile("materials/gware/menu/inventory_select.png")
-resource.AddFile("materials/gware/menu/back.png")
-
--- Class Icons --
-resource.AddFile("materials/gware/menu/sniper.png")
-resource.AddFile("materials/gware/menu/soldier.png")
-resource.AddFile("materials/gware/menu/thief.png")
-
 function GM:Initialize()
 	self:RoundInitialize()
 end
@@ -78,6 +59,6 @@ net.Receive("gw_retrievecreditlist", function(len)
 	net.Send(net.ReadEntity())
 end)
 
-function GM:OnDamagedByExplosion(ply, dmginfo)
+function GM:OnDamagedByExplosion(ply, dmginfo) // This prevents the annoying "BRAAAAM" when an explosion hits, essentially muting you.
 	ply:SetDSP(0, false)
 end
